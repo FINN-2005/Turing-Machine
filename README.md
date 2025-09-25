@@ -47,6 +47,4 @@ final_states = [1]
 ```
 
 `state_index` --> starting state (Default 0)  
-`step_limit`  --> max number of allowed transition steps `Default 5000`
-'''
-...
+`step_limit`  --> max number of allowed transition steps (Default 5000)
