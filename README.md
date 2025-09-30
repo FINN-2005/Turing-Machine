@@ -21,8 +21,7 @@ You can define any configuration you want with the format (look at the code, thi
     final_states:list[int | None], 
     state_index=0, 
     step_limit=5000
-):
-'''
+):  
 Returns `True` for success, `False` for Failure.
 
 ### States:
