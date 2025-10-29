@@ -31,32 +31,32 @@ class Turing_Machine:
 
     def set_values(self, states:list[list[int]], rules:list[list[int | str]], final_states:list[int | None], state_index=0, step_limit=5000):
         '''
-        Returns `True` for success, `False` for Failure.
+        Returns `True` for success, `False` for Failure.  
 
         ---
         ### States:
-        Stores the index of rules each state follows
-        Example:
+        Stores the index of rules each state follows  
+        Example:  
         ```
-        states = [[0,7],[]]         # leave empty for final states (optional, final state's production rules are ignored)
-        ```
-        ---
-        ### Rules:
-        Format: `[ start_state, read, direction, next_state, write ]`
-        Example:
-        ```
-        rules = [[0, 'a', 'R', 1, 'X'],[1, 'a', 'R', 1, 'a']]
+        states = [[0,7],[]]         # leave empty for final states (optional, final state's production rules are ignored)  
         ```
         ---
-        ### Final States:
-        Stores the index of state (from `states`) that are `Final States`
-        Example:
+        ### Rules:  
+        Format: `[ start_state, read, direction, next_state, write ]`  
+        Example:  
         ```
-        final_states = [1]
+        rules = [[0, 'a', 'R', 1, 'X'],[1, 'a', 'R', 1, 'a']]  
         ```
         ---
-        `state_index` --> starting state `Default 0`\n
-        `step_limit`  --> max number of allowed transition steps `Default 5000`
+        ### Final States:  
+        Stores the index of state (from `states`) that are `Final States`  
+        Example:  
+        ```
+        final_states = [1]  
+        ```
+        ---
+        `state_index` --> starting state `Default 0`\n  
+        `step_limit`  --> max number of allowed transition steps `Default 5000`  
         '''
         if not states: print('Mismatch in `States`:\n', states, sep='')
         elif not all(len(rule) == 5 for rule in rules): print('Mismatch in `Rules`:\n', rules, sep='')
@@ -72,10 +72,10 @@ class Turing_Machine:
     
     def set_tape(self, tape:str):
         '''
-        Sets the tape to a new string, surrounded by blanks `_`. Enter a string that you want to validate with the Machine.
-        Example:
+        Sets the tape to a new string, surrounded by blanks `_`. Enter a string that you want to validate with the Machine.  
+        Example:  
         ```
-        tm.set_tape("ab")  # tape becomes ['_', 'a', 'b', '_']
+        tm.set_tape("ab")  # tape becomes ['_', 'a', 'b', '_']  
         ```
         '''
 
